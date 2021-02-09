@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 //const uri='mongodb+srv://abhishek:abhishek54321@cluster0.dfvfh.mongodb.net/MemeDB?retryWrites=true&w=majority';
 const uri   = process.env.DB_URL || "mongodb://localhost/meme_app";
-
+console.log(uri);
 mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true})
         .then(()=>console.log('CONNECTED WITH MONGO ATLAS'))
         .catch((err)=>{
